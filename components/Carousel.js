@@ -15,10 +15,125 @@
 /* HTML:
   <div class="carousel">
     <div class="left-button"> < </div>
-    <img src="./assets/carousel/mountains.jpeg" />
-    <img src="./assets/carousel/computer.jpeg" />
-    <img src="./assets/carousel/trees.jpeg" />
-    <img src="./assets/carousel/turntable.jpeg" />
+    <img src="../assets/carousel/mountains.jpeg" />
+    <img src="../assets/carousel/computer.jpeg" />
+    <img src="../assets/carousel/trees.jpeg" />
+    <img src="../assets/carousel/turntable.jpeg" />
     <div class="right-button"> > </div>
   </div>
 */
+let currentIndex = 0;
+function makeCarousel() {
+
+  let carousel = document.createElement('div')
+  carousel.className = "carousel"
+    
+    let leftButton = document.createElement('div')
+    leftButton.className = "left-button"
+    leftButton.addEventListener("click", ()=>{
+
+      if (currentIndex <= 0){
+        console.log('limit reached');
+      } else {
+        currentIndex--
+        let cas = currentIndex;
+        switch (cas) {
+          case 0:
+            mountains.style.display = "block"
+            computer.style.display ="none"
+            trees.style.display ="none"  
+            turntable.style.display ="none"
+            break;
+          case 1:
+            mountains.style.display = "none"
+            computer.style.display ="block"
+            trees.style.display ="none"  
+            turntable.style.display ="none"
+            break;
+          case 2:
+            mountains.style.display = "none"
+            computer.style.display ="none"
+            trees.style.display ="block"  
+            turntable.style.display ="none"
+            break;
+          case 3:
+            mountains.style.display = "none"
+            computer.style.display ="none"
+            trees.style.display ="none"  
+            turntable.style.display ="block"
+            break;
+        
+          default:
+            break;
+        }
+      }
+      
+    })
+    carousel.appendChild(leftButton)
+
+    let  mountains = document.createElement('img')
+    mountains.src = "../assets/carousel/mountains.jpeg"
+    mountains.style.display = "block"
+    console.log(mountains)
+    carousel.appendChild(mountains)
+    
+    let  computer = document.createElement('img')
+    computer.src = "../assets/carousel/computer.jpeg"
+    computer.style.display ="none"
+    carousel.appendChild(computer)
+    
+    let  trees = document.createElement('img')
+    trees.src = "../assets/carousel/trees.jpeg"
+    trees.style.display ="none"   
+    carousel.appendChild(trees)
+    
+    let  turntable = document.createElement('img')
+    turntable.src = "../assets/carousel/turntable.jpeg"
+    turntable.style.display ="none"
+    carousel.appendChild(turntable)
+    
+    let rightButton = document.createElement('div')
+    rightButton.className = "right-button"
+    rightButton.addEventListener("click", ()=>{
+      if (currentIndex >= 3){
+        console.log('limit reached');
+      } else {
+        currentIndex++
+        let cas = currentIndex;
+        switch (cas) {
+          case 0:
+            mountains.style.display = "block"
+            computer.style.display ="none"
+            trees.style.display ="none"  
+            turntable.style.display ="none"
+            break;
+          case 1:
+            mountains.style.display = "none"
+            computer.style.display ="block"
+            trees.style.display ="none"  
+            turntable.style.display ="none"
+            break;
+          case 2:
+            mountains.style.display = "none"
+            computer.style.display ="none"
+            trees.style.display ="block"  
+            turntable.style.display ="none"
+            break;
+          case 3:
+            mountains.style.display = "none"
+            computer.style.display ="none"
+            trees.style.display ="none"  
+            turntable.style.display ="block"
+            break;
+        
+          default:
+            break;
+        }
+      }
+    })
+    carousel.appendChild(rightButton)
+
+    return carousel
+}
+document.querySelector('.carousel-container').appendChild(makeCarousel())
+console.log(makeCarousel())
