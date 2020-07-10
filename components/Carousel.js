@@ -43,24 +43,28 @@ function makeCarousel() {
             computer.style.display ="none"
             trees.style.display ="none"  
             turntable.style.display ="none"
+            gsap.from(".carousel-container", {duration: 1, ease: "back", opacity: 0, x:-150});
             break;
           case 1:
             mountains.style.display = "none"
             computer.style.display ="block"
             trees.style.display ="none"  
             turntable.style.display ="none"
+            gsap.from(".carousel-container", {duration: 1, ease: "back", opacity: 0, x:-150});
             break;
           case 2:
             mountains.style.display = "none"
             computer.style.display ="none"
             trees.style.display ="block"  
             turntable.style.display ="none"
+            gsap.from(".carousel-container", {duration: 1, ease: "back", opacity: 0, x:-150});
             break;
           case 3:
             mountains.style.display = "none"
             computer.style.display ="none"
             trees.style.display ="none"  
             turntable.style.display ="block"
+            gsap.from(".carousel-container", {duration: 1, ease: "back", opacity: 0, x:-150});
             break;
         
           default:
@@ -106,24 +110,28 @@ function makeCarousel() {
             computer.style.display ="none"
             trees.style.display ="none"  
             turntable.style.display ="none"
+            gsap.from(".carousel-container", {duration: 1, ease: "back", opacity: 0, x:-150});
             break;
           case 1:
             mountains.style.display = "none"
             computer.style.display ="block"
             trees.style.display ="none"  
             turntable.style.display ="none"
+            gsap.from(".carousel-container", {duration: 1, ease: "back", opacity: 0, x:-150});
             break;
           case 2:
             mountains.style.display = "none"
             computer.style.display ="none"
             trees.style.display ="block"  
             turntable.style.display ="none"
+            gsap.from(".carousel-container", {duration: 1, ease: "back", opacity: 0, x:-150});
             break;
           case 3:
             mountains.style.display = "none"
             computer.style.display ="none"
             trees.style.display ="none"  
             turntable.style.display ="block"
+            gsap.from(".carousel-container", {duration: 1, ease: "back", opacity: 0, x:-150});
             break;
         
           default:
